@@ -24,15 +24,6 @@
     <span id="toggleIcon">☀️</span>
   </button>
 
-  <!-- Nav dots (desktop) -->
-  <nav class="sidenav" aria-label="Page sections">
-    <a href="#hero"  class="dot-link active" data-section="hero"    title="Home"></a>
-    <a href="#about" class="dot-link"         data-section="about"  title="About"></a>
-    <a href="#yt"    class="dot-link"         data-section="yt"     title="Videos"></a>
-    <a href="#blogs" class="dot-link"         data-section="blogs"  title="Blogs"></a>
-  </nav>
-
-  <main class="page">
 
     <!-- ══════════════ HERO ══════════════ -->
     <section class="card fade" id="hero">
@@ -47,13 +38,6 @@
         <span class="age-label">years old</span>
       </div>
     </section>
-
-    <!-- ══════════════ ABOUT ══════════════ -->
-    <section class="card fade d1" id="about">
-      <h2 class="sec-title"><span class="dot-accent">✦</span> About Me</h2>
-      <p class="about-text">
-        I'm Suren, currently doing everything that makes me happy and that makes me feel 
-        grateful for what I'm doing. Undergoing UG in terms academic qualifications.
 
 
     <!-- ══════════════ YOUTUBE ══════════════ -->
@@ -71,29 +55,15 @@
       </div>
     </section>
 
-    <!-- ══════════════ BLOGS ══════════════ -->
-    <section class="card fade d3" id="blogs">
-      <h2 class="sec-title"><span class="dot-accent">✍</span> Blogs</h2>
-      <div class="blog-list" id="blogList">
+    
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section class="card fade d1" id="about">
+      <h2 class="sec-title"><span class="dot-accent">✦</span> About Me</h2>
+      <p class="about-text">
+        I'm Suren, currently doing everything that makes me happy and that makes me feel 
+        grateful for what I'm doing. Undergoing UG in terms academic qualifications.
+        
 
-        <!-- Blog Post 1 — TEMPLATE, edit freely -->
-        <article class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">Feb 2026</span>
-            <span class="blog-tag">Life</span>
-          </div>
-          <h3 class="blog-title">Why I Started This Website</h3>
-          <p class="blog-excerpt">
-            Every big thing starts with a small decision. This site is mine — 
-            a place to share thoughts, videos, and whatever's on my mind.
-          </p>
-          <button class="blog-read" onclick="openBlog(0)">Read more →</button>
-        </article>
-
-        <!-- Add more blog posts below by copying the article block above -->
-
-      </div>
-    </section>
 
     <!-- ══════════════ FOOTER ══════════════ -->
     <footer class="card fade d4" id="footer">
@@ -111,17 +81,3 @@
     </footer>
 
   </main>
-
-  <!-- ══════════════ BLOG MODAL ══════════════ -->
-  <div class="modal-overlay hidden" id="modalOverlay" onclick="closeBlog()">
-    <div class="modal" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeBlog()">✕</button>
-      <p class="modal-date" id="modalDate"></p>
-      <h2 class="modal-title" id="modalTitle"></h2>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
