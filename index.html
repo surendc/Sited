@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suren</title>
+  <meta name="description" content="Personal site of Suren" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background orbs -->
+  <div class="bg" aria-hidden="true">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
+
+  <!-- Theme toggle -->
+  <button class="toggle" id="themeToggle" aria-label="Toggle theme">
+    <span id="toggleIcon">☀️</span>
+  </button>
+
+  <!-- Nav dots (desktop) -->
+  <nav class="sidenav" aria-label="Page sections">
+    <a href="#hero"  class="dot-link active" data-section="hero"    title="Home"></a>
+    <a href="#about" class="dot-link"         data-section="about"  title="About"></a>
+    <a href="#yt"    class="dot-link"         data-section="yt"     title="Videos"></a>
+    <a href="#blogs" class="dot-link"         data-section="blogs"  title="Blogs"></a>
+  </nav>
+
+  <main class="page">
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="card fade" id="hero">
+      <p class="eyebrow">✦ welcome to my corner of the internet</p>
+      <h1 class="headline">
+        Hey Folks!<br>
+        <em>Suren</em> Here
+      </h1>
+      <div class="age-pill">
+        <span class="age-label">I'm</span>
+        <span class="age-num" id="ageDisplay">0.000000000000000</span>
+        <span class="age-label">years old</span>
+      </div>
+    </section>
+
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section class="card fade d1" id="about">
+      <h2 class="sec-title"><span class="dot-accent">✦</span> About Me</h2>
+      <p class="about-text">
+        I'm Suren, currently doing everything that makes me happy and that makes me feel 
+        grateful for what I'm doing. Undergoing UG in the academic sector.
+      </p>
+      <div class="about-tags">
+        <span class="tag">🎬 Content Creator</span>
+        <span class="tag">📚 Student</span>
+        <span class="tag">✨ Living Intentionally</span>
+      </div>
+    </section>
+
+    <!-- ══════════════ YOUTUBE ══════════════ -->
+    <section class="card fade d2" id="yt">
+      <h2 class="sec-title"><span class="dot-accent">▶</span> Latest Upload</h2>
+      <div id="ytWrap" class="yt-wrap hidden">
+        <iframe id="ytFrame" src="" title="Latest video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p id="ytTitle" class="yt-title"></p>
+      </div>
+      <div id="ytEmpty" class="yt-empty">
+        <div class="loader-ring"></div>
+        <p>Loading latest video…</p>
+      </div>
+    </section>
+
+    <!-- ══════════════ BLOGS ══════════════ -->
+    <section class="card fade d3" id="blogs">
+      <h2 class="sec-title"><span class="dot-accent">✍</span> Blogs</h2>
+      <div class="blog-list" id="blogList">
+
+        <!-- Blog Post 1 — TEMPLATE, edit freely -->
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">Feb 2026</span>
+            <span class="blog-tag">Life</span>
+          </div>
+          <h3 class="blog-title">Why I Started This Website</h3>
+          <p class="blog-excerpt">
+            Every big thing starts with a small decision. This site is mine — 
+            a place to share thoughts, videos, and whatever's on my mind.
+          </p>
+          <button class="blog-read" onclick="openBlog(0)">Read more →</button>
+        </article>
+
+        <!-- Add more blog posts below by copying the article block above -->
+
+      </div>
+    </section>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer class="card fade d4" id="footer">
+      <nav class="socials">
+        <a href="https://www.facebook.com/suren.exists" class="btn-social" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://youtube.com/@manwaree" class="btn-social" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </a>
+      </nav>
+      <p class="copy">© <span id="yr"></span> Suren. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+  <!-- ══════════════ BLOG MODAL ══════════════ -->
+  <div class="modal-overlay hidden" id="modalOverlay" onclick="closeBlog()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeBlog()">✕</button>
+      <p class="modal-date" id="modalDate"></p>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
