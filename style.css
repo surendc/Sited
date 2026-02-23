@@ -77,20 +77,6 @@ body {
 }
 .toggle:hover { transform: scale(1.1) rotate(14deg); box-shadow: 0 4px 22px var(--gold-glow); }
 
-/* ── Side nav dots ── */
-.sidenav {
-  position: fixed; right: 1.4rem; top: 50%; transform: translateY(-50%);
-  z-index: 99; display: flex; flex-direction: column; gap: 10px;
-}
-.dot-link {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--muted); display: block;
-  transition: background 0.25s, transform 0.25s;
-}
-.dot-link:hover, .dot-link.active { background: var(--gold); transform: scale(1.4); }
-
-@media (max-width: 560px) { .sidenav { display: none; } }
-
 /* ── Page layout ── */
 .page {
   position: relative; z-index: 1;
@@ -318,3 +304,4 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(201,151,63,0.22); border-radius: 999px; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+     
