@@ -129,6 +129,32 @@ body {
   text-shadow: 0 0 18px var(--gold-glow); min-width: 18ch;
 }
 
+/* ── Countdown ── */
+.countdown-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.countdown-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 40px var(--gold-glow);
+}
+
+.countdown-unit {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--sub);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
 /* ── Section title ── */
 .sec-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -304,4 +330,3 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(201,151,63,0.22); border-radius: 999px; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
-     
