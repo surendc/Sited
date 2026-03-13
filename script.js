@@ -34,7 +34,25 @@ setInterval(tickAge, 30);
 tickAge();
 
 /* ════════════════════════════
-   2. DARK / LIGHT THEME
+   2. COUNTDOWN — Jan 1, 2030
+════════════════════════════ */
+const COUNTDOWN_TARGET = new Date('2030-01-01T00:00:00');
+const countdownEl      = document.getElementById('countdownDays');
+const MS_PER_DAY       = 24 * 60 * 60 * 1000;
+
+function tickCountdown() {
+  const diff = COUNTDOWN_TARGET.getTime() - Date.now();
+  if (diff <= 0) {
+    countdownEl.textContent = '0.00';
+    return;
+  }
+  countdownEl.textContent = (diff / MS_PER_DAY).toFixed(2);
+}
+setInterval(tickCountdown, 100);
+tickCountdown();
+
+/* ════════════════════════════
+   3. DARK / LIGHT THEME
 ════════════════════════════ */
 function setTheme(t) {
   document.documentElement.setAttribute('data-theme', t);
@@ -47,7 +65,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 /* ════════════════════════════
-   3. YOUTUBE API
+   4. YOUTUBE API
 ════════════════════════════ */
 async function loadLatestVideo() {
   try {
@@ -81,4 +99,4 @@ loadLatestVideo();
    6. COPYRIGHT YEAR
 ════════════════════════════ */
 yrEl.textContent = new Date().getFullYear();
-           
+                             
